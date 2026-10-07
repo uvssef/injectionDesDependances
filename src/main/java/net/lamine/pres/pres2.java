@@ -20,7 +20,7 @@ public class pres2 {
 
         String MetierClassName = scanner.nextLine();
         Class cMetier = Class.forName(MetierClassName);
-//        IMetier Metier = (IMetier) cMetier.getConstructor(IDao.class).newInstance(dao);
+        IMetier Metier = (IMetier) cMetier.getConstructor(IDao.class).newInstance(dao);
 
         System.out.println("RES = " + Metier.Calcul());
 
