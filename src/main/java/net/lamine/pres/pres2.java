@@ -7,6 +7,7 @@ import net.lamine.metier.MetierImpl;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Scanner;
 
 public class pres2 {
@@ -20,9 +21,13 @@ public class pres2 {
 
         String MetierClassName = scanner.nextLine();
         Class cMetier = Class.forName(MetierClassName);
-        IMetier Metier = (IMetier) cMetier.getConstructor(IDao.class).newInstance(dao);
+        IMetier Metier  = (IMetier) cMetier.getConstructor(IDao.class).newInstance(dao);
+//        IMetier metier = (IMetier) cMetier.getConstructor().newInstance();
+//        Method setDao = cMetier.getDeclaredMethod("setDao" , IDao.class);
+//        setDao.invoke(metier , dao);
 
         System.out.println("RES = " + Metier.Calcul());
+
 
     }
 }
