@@ -12,8 +12,16 @@ public class MetierImpl implements IMetier {
     public MetierImpl() {
     }
 
+
+//    Pour injecter dans la varriable dao un objet d'une class qui impiment
+//    l'interface IDao
+
     public void setDao(IDao dao) {
         this.dao = dao;
+    }
+
+    public IDao getDao() {
+        return dao;
     }
 
     @Override
@@ -22,4 +30,7 @@ public class MetierImpl implements IMetier {
         double res = t + 3 ;
         return res ;
     }
-}
+
+
+    }
+

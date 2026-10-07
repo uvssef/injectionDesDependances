@@ -1,6 +1,6 @@
 package net.lamine.dao;
 
-public class DaiImpl implements IDao{
+public class DaoImpl implements IDao{
 
     @Override
     public double getData() {
