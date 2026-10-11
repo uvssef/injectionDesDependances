@@ -1,16 +1,20 @@
 package net.lamine.metier;
 
 import net.lamine.dao.IDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component("metier")
 public class MetierImpl implements IMetier {
+
     private IDao dao ;
 
-    public MetierImpl(IDao dao) {
-        this.dao = dao;
+    public MetierImpl(@Qualifier("d")IDao dao) {
+         this.dao = dao;
     }
 
-    public MetierImpl() {
-    }
+
 
 
 //    Pour injecter dans la varriable dao un objet d'une class qui impiment
